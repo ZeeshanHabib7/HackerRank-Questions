@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+function custom_sort($arr){
+$arr_count = count($arr);
+
+
+
+for($j = 0; $j < $arr_count; $j ++) {
+    for($i = 0; $i < $arr_count-1; $i ++){
+
+        if($arr[$i] > $arr[$i+1]) {
+            $temp = $arr[$i+1]; //30,40,10,
+
+            $arr[$i+1]=$arr[$i]; //250,250,70
+            
+            $arr[$i]=$temp; //30,40,10,
+        }
+    }
+ 
+}
+
+echo "Sorted Array is: ";
+echo "<br />";
+echo json_encode($arr);
+
+    
+}
+
+$array = array(50,250,30,250,40,70,10,50); 
+custom_sort($array);
+
+
+?>
+
+</body>
+</html>
