@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+function numberPatternpyramid($rows){
+$n = 1;
+
+for($i=1;$i<=$rows;$i++){
+ 	for($k=$rows;$k>$i;$k--){
+    	echo '&nbsp;&nbsp;';
+    }
+	for($j=1;$j<=$i;$j++){
+ 		echo $n.' ';
+        $n++;
+    }
+    echo '</br>';
+}
+}
+numberPatternpyramid(6);
+?>
+
+</body>
+</html>
