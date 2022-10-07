@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$perc=100;
+for ($i=15;$i>=1;$i--){
+	echo 'day ('.$i.') '.$perc.'%'.'<br>';
+    $perc=$perc/2;
+}
+?>
+
+</body>
+</html>
+
+//Reasoning
+//if spider done 100% on 15th day then on 14th day only 50% was completed and on 13th day 25% was done
