@@ -69,10 +69,12 @@ function fullDiamond($len){
         
         for($s=0;$s<= $noOfSpaces;$s++){
         	echo "&nbsp";
+            echo "&nbsp";
         }
         
     	for($col=0;$col<=$noOfCol;$col++){
         	echo "*";
+            echo "&nbsp";echo "&nbsp";
         }
         echo "<br>";
     }
@@ -85,14 +87,36 @@ function fullNumberDiamond($len){
     	$noOfspaces = $len - $noOfCol;
         for($s=1;$s<=$noOfspaces;$s++){
         	echo "&nbsp";
+            echo "&nbsp";
+            
         }
         for($col=1;$col<=$noOfCol;$col++){
         	echo $col;
+            echo "&nbsp";echo "&nbsp";
         }
         echo "<br>";
     
     }
 
+}
+
+function trianglePattern($len){
+	for($row=1; $row<=$len ; $row++){
+    	for($spaces=0; $spaces <= $len-$row ;$spaces++){
+        	echo "&nbsp";
+            echo "&nbsp";
+            echo "&nbsp";
+        }
+        for($col=$row; $col>= 1 ; $col --){
+        	echo $col;
+            echo "&nbsp";
+        }
+        for($col=2 ; $col<=$row ; $col++){
+        	echo $col;
+            echo "&nbsp";
+        }
+        echo "<br>";
+    }
 }
 
 
@@ -118,6 +142,10 @@ fullDiamond(5);
 
 echo "<br> full diamond <br><br>";
 fullNumberDiamond(5);
+
+
+echo "<br> Triangle <br><br>";
+trianglePattern(5);
 
 ?> 
 
